@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+#mapContainer {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#map {
+  height: 500px; /* Define the height of the map */
+}
+
+#filters {
+  margin: 10px 0;
+}
+
+label {
+  margin-right: 10px;
+}

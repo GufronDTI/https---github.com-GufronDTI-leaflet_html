@@ -1,4 +1,4 @@
-// Initializing map
+// Initializing map push this
 var map = L.map('map').setView([51.505, -0.09], 5); // Default location (London)
 
 // Load the base map layer using OpenStreetMap tiles

@@ -6,14 +6,13 @@
   <title>Map Analysis Dashboard with Leaflet</title>
   <link rel="stylesheet" href="css/style.css">
   
-  <!-- Leaflet CSS -->
+  
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 </head>
 <body>
   <h1>Map Analysis Dashboard with Leaflet</h1>
-
-  <!-- Dropdown to select map analysis type -->
+  
   <label for="mapSelect">Select Analysis Type:</label>
   <select id="mapSelect" onchange="filterMapData()">
     <option value="population">Population Density</option>
@@ -21,7 +20,6 @@
     <option value="elevation">Elevation</option>
   </select>
 
-  <!-- Checkbox filters -->
   <div id="filters">
     <h3>Filters:</h3>
     <label>
@@ -32,21 +30,16 @@
     </label>
   </div>
 
-  <!-- Map Container -->
+  
   <div id="mapContainer">
     <div id="map"></div>
   </div>
 
-  <!-- Placeholder for analysis -->
   <div id="analysisContainer">
     <h2>Analysis Data:</h2>
     <div id="analysisData"></div>
   </div>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  
-  <!-- Main JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
   <script src="js/script.js"></script>
 </body>
 </html>

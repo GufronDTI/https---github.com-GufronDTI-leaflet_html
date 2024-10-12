@@ -1,4 +1,4 @@
-// Initialize the map
+// Initializing map
 var map = L.map('map').setView([51.505, -0.09], 5); // Default location (London)
 
 // Load the base map layer using OpenStreetMap tiles
@@ -7,11 +7,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 }).addTo(map);
 
-// Create layers for cities and rivers (placeholders)
+// Create layers for cities and rivers
 var citiesLayer = L.layerGroup();
 var riversLayer = L.layerGroup();
 
-// Adding a few sample cities (this could be from real data)
+// Adding a few sample cities
 var cityMarkers = [
   L.marker([51.5, -0.09]).bindPopup('London'),
   L.marker([48.8566, 2.3522]).bindPopup('Paris'),
@@ -19,7 +19,7 @@ var cityMarkers = [
 ];
 cityMarkers.forEach(marker => citiesLayer.addLayer(marker));
 
-// Adding some rivers (placeholder polyline)
+// Adding some rivers
 var riverPolyline = L.polyline([
   [51.5, -0.09], [52.5, 0.09], [53.5, 1.09]
 ], {color: 'blue'}).bindPopup('River Example');
@@ -44,16 +44,16 @@ function filterMapData() {
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  // Display selected analysis type (this is just simulated)
+  // Display selected analysis type
   if (selectedAnalysis === 'population') {
-    alert('Displaying Population Density analysis'); // You can update this to show actual layers
+    alert('Displaying Population Density analysis'); 
   } else if (selectedAnalysis === 'temperature') {
-    alert('Displaying Temperature analysis'); // Replace with real data
+    alert('Displaying Temperature analysis'); 
   } else if (selectedAnalysis === 'elevation') {
-    alert('Displaying Elevation analysis'); // Replace with real data
+    alert('Displaying Elevation analysis');
   }
 
-  // Add layers for cities and rivers if filters are selected
+  // Add layers for cities and rivers if filters selected
   if (showCities) {
     citiesLayer.addTo(map);
   }
@@ -61,11 +61,11 @@ function filterMapData() {
     riversLayer.addTo(map);
   }
 
-  // Update analysis data (simulated)
+  // Update analysis data
   updateAnalysisData(selectedAnalysis, showCities, showRivers);
 }
 
-// Simulated analysis data function
+// analysis data function
 function updateAnalysisData(analysisType, showCities, showRivers) {
   let analysisText = "";
 
@@ -88,5 +88,5 @@ function updateAnalysisData(analysisType, showCities, showRivers) {
   document.getElementById('analysisData').innerText = analysisText;
 }
 
-// Initial call to display default content
+
 filterMapData();
